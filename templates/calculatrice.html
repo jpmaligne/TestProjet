@@ -1,0 +1,19 @@
+<html>
+    <h1>Calculator</h1>
+    <form name="form" method="POST" action="calculatrice">
+        <input type="number" placeholder="a number" name="n1">
+        <select name="operation">
+            <option value="add">Add</option>
+            <option value="subtract">Subtract</option>
+            <option value="multiply">Multiply</option>
+            <option value="divide">Divide</option>
+        </select>
+        <input type="number" placeholder="another number" name="n2">
+        <input type="submit" value="Calculate">
+    </form>
+    {% if result.error %}
+    <span style="color: red;">Error: {{ result.error }}</span>
+    {% else %}
+    Result : {{ result }}
+    {% endif %}
+</html>
